@@ -11,11 +11,15 @@ import java.util.*;
  */
 public class Assignment1Tester {
 
-        int[] testArr = {0, -3, 5, -4, -2, 3, 1, 0};
+//        int[] testArr = {0, -3, 5, -4, -2, 3, 1, 0};
 //      int[] arr = {10,10,-5,25,-5};
     public static void main(String[] args) {
-        int[] testArr = {0, -3, 5, -4, -2, 3, 1, 0};
-        indexStability(testArr);
+        int[] testArr1 = {0, -3, 5, -4, -2, 3, 1, 0};
+        int[] testArr2 = {0, 3, 5, 14, 22, 33, 41, 50};
+        indexStability(testArr1);
+        
+        System.out.println(terSearch(testArr2,0,7,99));
+        
     }
     
      public static void indexStability(int[] arr){
