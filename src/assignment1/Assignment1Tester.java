@@ -33,5 +33,34 @@ public class Assignment1Tester {
         }
     }
 
-     
+     public static int terSearch(int[] arr, int l, int r, int x){
+         if ( l > r )
+        {
+            return -1;
+        }
+        
+        int d1 = l + ((r - l) / 3);
+        int d2 = d1 + ((r - l) / 3);
+
+        if (arr[d1] == x)
+        {
+            return d1;
+        }
+        else if (arr[d2] == x)
+        {
+            return d2;
+        }
+        else if ( x < arr[d1])
+        {
+            return terSearch(arr, l, d1 - 1, x);
+        }
+        else if ( x > arr[d2])
+        {
+            return terSearch(arr, d2 + 1, r, x);
+        }
+        else
+        {
+            return terSearch(arr, d1, d2, x);
+        }
+     }
 }
