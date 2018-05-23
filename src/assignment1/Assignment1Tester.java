@@ -11,32 +11,14 @@ import java.util.*;
  */
 public class Assignment1Tester {
 
-    
-    
-    /**
-     * @param args the command line arguments
-     */
+        int[] testArr = {0, -3, 5, -4, -2, 3, 1, 0};
+//      int[] arr = {10,10,-5,25,-5};
     public static void main(String[] args) {
-
-        int[] arr = {0, -3, 5, -4, -2, 3, 1, 0};
-//        int[] arr = {10,10,-5,25,-5};
-        
-        
-        for(int num = 0; num < arr.length; num++){
-            int sumLeft= 0;
-            int sumRight = 0;
-        for(int i = 0; i<num; i++){
-            sumLeft= sumLeft + arr[i];
-        }
-        for(int i = num + 1; i < arr.length;i++){
-            sumRight= sumRight + arr[i];
-        }
-        if(sumLeft==sumRight){
-            System.out.println(num);
-        }
-        }
-        
-        
+        int[] testArr = {0, -3, 5, -4, -2, 3, 1, 0};
+        indexStability(testArr);
+    }
+    
+     public static void indexStability(int[] arr){
         int all = 0;
         int sumLeft= 0;
         for (int num : arr){
@@ -48,6 +30,8 @@ public class Assignment1Tester {
             System.out.println(num);
         }
        sumLeft = sumLeft + arr[num]; 
+        }
     }
-    }  
+
+     
 }
